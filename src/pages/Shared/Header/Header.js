@@ -1,8 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
+    const {user} = useContext(AuthContext)
     return (
         <div className='bg-amber-400'>
             <div className="container navbar m-auto">
@@ -28,8 +31,9 @@ const Header = () => {
                         <li><NavLink to='/blog'>Blog</NavLink></li>
                     </ul>
                 </div>
-                <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"></button>
                 <div className="navbar-end">
+                    <input type="checkbox" className="toggle mr-5"/>
+                    <NavLink>{user?.displayName}</NavLink>
                     <NavLink className='btn'>Log In</NavLink>
                 </div>
             </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptop, faBuilding, faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-   
+    const cards = useLoaderData()
+    console.log(cards)
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}>
@@ -49,8 +51,28 @@ const Home = () => {
             </div>
             </div>
 
-            <div>
+            
+
+            <div className='container m-auto'>
                 <h1 className='text-center text-4xl my-10 font-bold'>Our Courses</h1>
+                <div className='grid grid-cols-3 gap-4 w-4/6 m-auto'>
+                        {
+                            cards.map(card=>
+                            <div key={card.id} className='text-center'>
+                                <Link to={`/courses/${card.id}`}>
+                                <div className="card w-64 bg-base-100 shadow-xl image-full">
+                                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                                    <div className="card-body text-center">
+                                        <h2 className="text-xl font-semibold">{card.name}</h2>
+                                        <p>{card.subs}</p>
+                                    </div>
+                                </div>
+                                
+                                </Link>
+                            </div>
+                            )
+                        }
+                </div>
             </div>
         </div>
     );
