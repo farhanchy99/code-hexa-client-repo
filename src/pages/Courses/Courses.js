@@ -11,13 +11,12 @@ const Courses = () => {
             <div className='container flex grid-cols-2 gap-4 mb-16'>
                 <div className='w-1/4'><LeftNav></LeftNav></div>
                 <div className='m-auto'>
-                    <h1>All Course{cards.length}</h1>
-                    <div className='grid grid-cols-3 gap-8'>
+                    <div className='grid lg:grid-cols-3 lg:gap-8'>
                         {
                             cards.map(card=>
                             <div key={card.id} className=''>
-                               <div className="card card-compact w-72 bg-base-100 shadow-xl">
-                                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                               <div className="card card-compact w-8/12 lg:w-72 bg-base-100 shadow-xl">
+                                    <figure><img src={card.img} alt="courses"/></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{card.name}</h2>
                                         <p>{card.price}</p>

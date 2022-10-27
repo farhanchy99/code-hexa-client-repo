@@ -2,13 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptop, faBuilding, faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLoaderData } from 'react-router-dom';
+import "../Home/Home.css"
+import img from "../img/cover-2.jpg"
 
 const Home = () => {
     const cards = useLoaderData()
     console.log(cards)
     return (
         <div>
-            <div className="hero min-h-screen" style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}>
+            <div className="hero h-96 lg:min-h-screen bgcover">
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
@@ -40,10 +42,10 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="container m-auto card lg:card-side bg-gradient-to-r from-white to-amber-400 shadow-xl">
-            <figure className='w-1/2'><img src="https://placeimg.com/400/400/arch" alt="Album"/></figure>
-            <div className="px-16 w-3/5">
-                <h2 className="card-title text-5xl font-semibold pt-32 mb-5">Differentiate your classroom and engage every student.</h2>
+            <div className="container m-auto card lg:card-side bg-amber-400 shadow-xl sm:w-11/12">
+            <figure className='w-full lg:w-1/2 lg:pl-5'><img src={img} alt="Album"/></figure>
+            <div className="px-16 p-20 w-full lg:w-3/5">
+                <h2 className="card-title text-5xl font-semibold mb-5">Differentiate your classroom and engage every student.</h2>
                 <p className='mb-5 text-white'>We empower teachers to support their entire classroom. 90% of US teachers who have used Khan Academy have found us effective.</p>
                 <div className="card-actions justify-end">
                 <button className="btn btn-primary">Join Now</button>
@@ -55,15 +57,15 @@ const Home = () => {
 
             <div className='container m-auto'>
                 <h1 className='text-center text-4xl my-10 font-bold'>Our Courses</h1>
-                <div className='grid grid-cols-3 gap-4 w-4/6 m-auto'>
+                <div className='grid grid-cols-3 gap-4 w-4/6 m-auto mb-10'>
                         {
                             cards.map(card=>
                             <div key={card.id} className='text-center'>
                                 <Link to={`/courses/${card.id}`}>
-                                <div className="card w-64 bg-base-100 shadow-xl image-full">
-                                    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                                <div className="card lg:w-64 bg-base-100 shadow-xl image-full">
+                                    <figure><img src={card.img} alt="Shoes" /></figure>
                                     <div className="card-body text-center">
-                                        <h2 className="text-xl font-semibold">{card.name}</h2>
+                                        <h2 className="lg:text-xl font-semibold">{card.name}</h2>
                                         <p>{card.subs}</p>
                                     </div>
                                 </div>

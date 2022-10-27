@@ -17,8 +17,8 @@ const Course = () => {
                             courseDetails.map(detail=> 
                             <div key={detail.id} className='mt-16'>
                                 <div className="card lg:card-side bg-base-100 shadow-xl">
-                                <figure><img src="https://placeimg.com/400/400/arch" alt="Album"/></figure>
-                                <div className="card-body">
+                                <figure className='w-96'><img src={detail.img} alt="Album"/></figure>
+                                <div className="card-body w-1/2">
                                     <h2 className="card-title">{detail.name}</h2>
                                     <p>{detail.about}</p>
                                     <p>{detail.subs}</p>

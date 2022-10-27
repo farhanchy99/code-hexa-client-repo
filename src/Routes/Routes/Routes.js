@@ -7,6 +7,7 @@ import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import Course from "../../pages/Shared/Course/Course";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses/:id',
-                element: <Course></Course>,
+                element: <PrivateRoute><Course></Course></PrivateRoute>,
                 loader: ({ params }) =>
                 fetch(`http://localhost:5000/courses/${params.id}`),
             },
@@ -46,5 +47,14 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             }
         ]
-    }
+    },
+    {
+        path: "*",
+        element: (
+          <div className="pt-16 block m-auto">
+            <h1 className='text-5xl text-amber-400'>404</h1>
+            <h1 className="text-5xl">Sorry Page not Found</h1>
+          </div>
+        ),
+      }
 ])

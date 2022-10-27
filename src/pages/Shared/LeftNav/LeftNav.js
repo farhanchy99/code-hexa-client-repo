@@ -15,7 +15,7 @@ const LeftNav = () => {
 
     return (
         <div className='bg-amber-400 p-10 rounded'>
-            <h2 className='text-2xl font-semibold mb-5'>Our courses list: {categories.length}</h2>
+            <h2 className='lg:text-2xl font-semibold mb-5'>Our courses list: {categories.length}</h2>
             <div>
                 {
                     categories.map(category => <p 
