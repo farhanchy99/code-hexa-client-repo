@@ -1,15 +1,35 @@
-
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
-    const {logIn} = useContext(AuthContext)
+    const {logIn, providerLogin} = useContext(AuthContext)
+    const googleProvider = new GoogleAuthProvider();
+    const gitHubProvider = new GithubAuthProvider()
     const navigate = useNavigate();
     const location = useLocation();
 
     const from = location.state?.from?.pathname|| "/";
+
+    const handleGoogleSignIn = () =>{
+        providerLogin(googleProvider)
+        .then(result=>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.error(error))
+    }
+
+    const handleGitHubSignIn = () =>{
+        providerLogin(gitHubProvider)
+        .then(result=>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.error(error))
+    }
 
     const handleSubmit = event =>{
         event.preventDefault();
@@ -55,6 +75,11 @@ const Login = () => {
                     </div>
                     <div className="form-control mt-6">
                     <button className="btn btn-primary">Login</button>
+                    </div>
+                    <p>or</p>
+                    <div>
+                        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-warning w-full">Google</button>
+                        <button onClick={handleGitHubSignIn} className="btn btn-outline btn-warning w-full">Github</button>
                     </div>
                 </form>
                 </div>

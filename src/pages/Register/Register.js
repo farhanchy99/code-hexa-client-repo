@@ -1,20 +1,14 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
-    const {providerLogin, createUser, updateUserProfile} = useContext(AuthContext);
+    const {createUser, updateUserProfile} = useContext(AuthContext);
 
-    const googleProvider = new GoogleAuthProvider()
+    
+    const navigate = useNavigate();
 
-    const handleGoogleSignIn = () =>{
-        providerLogin(googleProvider)
-        .then(result=>{
-            const user = result.user;
-            console.log(user);
-        })
-        .catch(error => console.error(error))
-    }
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -23,7 +17,6 @@ const Register = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        handleUpdateProfile(name, photoURL)
         console.log(name, photoURL, email, password);
 
         createUser(email, password)
@@ -31,18 +24,13 @@ const Register = () => {
             const user = result.user;
             console.log(user);
             form.reset();
+            navigate("/login");
+            const profile ={ displayName: name, photoURL:photoURL};
+            updateUserProfile(profile)
+            .then(()=>{})
+            .catch( e => console.error(e));
         })
         .catch( e => console.error(e));
-    }
-
-    const handleUpdateProfile = (name, photoURL) =>{
-        const profile ={
-            displayName: name,
-            photoURL: photoURL,
-        }
-        updateUserProfile(profile)
-        .then(() =>{})
-        .catch((error) => console.error(error))
     }
 
     return (
@@ -84,10 +72,7 @@ const Register = () => {
                     <button className="btn btn-primary mt-6 form-control" type='submit' value="Login">Sign in</button>
                     
                     <p className='text-center'>Or</p>
-                    <div>
-                        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-warning w-full">Google</button>
-                        <button className="btn btn-outline btn-warning w-full">Github</button>
-                    </div>
+                    
 
                 </form>
                 </div>
