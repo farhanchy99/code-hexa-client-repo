@@ -24,7 +24,7 @@ const Course = () => {
                                     <p>{detail.subs}</p>
                                     <p>{detail.price}</p>
                                     <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Listen</button>
+                                    <button className="btn btn-primary">Get Premium Access</button>
                                     </div>
                                 </div>
                                 </div>
