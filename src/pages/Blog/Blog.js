@@ -1,5 +1,4 @@
 import React from 'react';
-import img1 from "../img/cors.png"
 
 const Blog = () => {
     return (
