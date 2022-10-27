@@ -35,8 +35,11 @@ const Register = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen mb-16">
             <div className="hero-content flex-col lg:flex-row-reverse w-full">
+                <div className="text-center lg:text-left">
+                    <h1 className="text-5xl font-bold">Join with us now!</h1>
+                </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-3xl bg-base-100">
                 <form onSubmit={handleSubmit} className="card-body">
                     <div className="form-control">
@@ -70,10 +73,6 @@ const Register = () => {
                     </label>
                     </div>
                     <button className="btn btn-primary mt-6 form-control" type='submit' value="Login">Sign in</button>
-                    
-                    <p className='text-center'>Or</p>
-                    
-
                 </form>
                 </div>
             </div>

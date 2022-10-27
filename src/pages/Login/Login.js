@@ -1,5 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
@@ -74,12 +76,12 @@ const Login = () => {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn bg-amber-400">Login</button>
                     </div>
-                    <p>or</p>
+                    <p className='text-center text-lg text-bold'>OR</p>
                     <div>
-                        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-warning w-full">Google</button>
-                        <button onClick={handleGitHubSignIn} className="btn btn-outline btn-warning w-full">Github</button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-info w-full mb-5"><FontAwesomeIcon icon={faGoogle} className="mr-5"></FontAwesomeIcon> Google</button>
+                        <button onClick={handleGitHubSignIn} className="btn btn-success w-full"><FontAwesomeIcon icon={faGithub} className="mr-5"></FontAwesomeIcon> Github</button>
                     </div>
                 </form>
                 </div>
