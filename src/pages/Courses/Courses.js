@@ -9,7 +9,7 @@ const Courses = () => {
         <div className='container m-auto'>
             <h1 className='text-4xl font-bold my-10 text-center'>Our Courses</h1>
             <div className='container flex grid-cols-2 gap-4 mb-16'>
-                <div className='w-1/4'><LeftNav></LeftNav></div>
+                <div className='w-5/12 lg:w-1/4'><LeftNav></LeftNav></div>
                 <div className='m-auto'>
                     <div className='grid lg:grid-cols-3 lg:gap-8'>
                         {

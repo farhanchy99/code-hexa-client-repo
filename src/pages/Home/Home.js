@@ -46,7 +46,7 @@ const Home = () => {
             <figure className='w-full lg:w-1/2 lg:pl-5'><img src={img} alt="Album"/></figure>
             <div className="px-16 p-20 w-full lg:w-3/5">
                 <h2 className="card-title text-5xl font-semibold mb-5">Differentiate your classroom and engage every student.</h2>
-                <p className='mb-5 text-white'>We empower teachers to support their entire classroom. 90% of US teachers who have used Khan Academy have found us effective.</p>
+                <p className='mb-5 text-white'>We empower teachers to support their entire classroom. 90% of US teachers who have used Code Hexa have found us effective.</p>
                 <div className="card-actions justify-end">
                 <button className="btn btn-primary">Join Now</button>
                 </div>

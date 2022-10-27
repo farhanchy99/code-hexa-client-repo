@@ -1,80 +1,45 @@
 import React from 'react';
+import img1 from "../img/cors.png"
 
 const Blog = () => {
     return (
-        <div className='container m-auto'>
+        <div className='container m-auto mb-10'>
             <h1 className='text-4xl font-bold my-10 text-center'>Featured Blogs</h1>
             <div className=''>
-                <div className="card lg:card-side bg-amber-400 hover:shadow-3xl w-3/4 m-auto mb-14 border-solid border-2 border-black p-2">
-                    <figure><img src="https://placeimg.com/400/400/arch" alt="Album" className='rounded-lg'/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-6xl mt-28">What is CORS?</h2>
-                        <div className="card-actions justify-end">
-                        <label htmlFor="my-modal-1" className="btn modal-button transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 mt-28">Read More</label>
-                        <input type="checkbox" id="my-modal-1" className="modal-toggle" />
-                        <div className="modal">
-                            <div className="modal-box relative">
-                                <label htmlFor="my-modal-1" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
+                    What is CORS?
+                </div>
+                <div className="collapse-content"> 
+                    <p>Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.</p>
+                </div>
                 </div>
 
-                <div className="card lg:card-side bg-amber-400 hover:shadow-3xl w-3/4 m-auto mb-14 border-solid border-2 border-black p-2">
-                    <figure className='w-full'><img src="https://placeimg.com/400/400/arch" alt="Album" className='rounded-lg'/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-3xl mt-24">Why are you using Firebase? What other options do you have to implement authentication?</h2>
-                        <div className="card-actions justify-end">
-                        <label htmlFor="my-modal-2" className="btn modal-button transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 mt-16">Read More</label>
-                        <input type="checkbox" id="my-modal-2" className="modal-toggle" />
-                        <div className="modal">
-                            <div className="modal-box relative">
-                                <label htmlFor="my-modal-2" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
+                Why are you using Firebase? What other options do you have to implement authentication?
+                </div>
+                <div className="collapse-content"> 
+                    <p>Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.</p>
+                </div>
                 </div>
 
-                <div className="card lg:card-side bg-amber-400 hover:shadow-3xl w-3/4 m-auto mb-14 border-solid border-2 border-black p-2">
-                    <figure><img src="https://placeimg.com/400/400/arch" alt="Album" className='rounded-lg'/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-4xl mt-24">How does the private route work?</h2>
-                        <div className="card-actions justify-end">
-                        <label htmlFor="my-modal-3" className="btn modal-button transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 mt-20">Read More</label>
-                        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-                        <div className="modal">
-                            <div className="modal-box relative">
-                                <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
+                How does the private route work?
+                </div>
+                <div className="collapse-content"> 
+                    <p>Private Routes vary based on the Apps, For example, Dashboard, User Profile, App Settings, Home etc. In simple words, These routes can be accessed only after login. The constraints for Public and Private routes are that Public routes should not be accessed after login and Private routes should not be accessible before login.</p>
+                </div>
                 </div>
 
-                <div className="card lg:card-side bg-amber-400 hover:shadow-3xl w-3/4 m-auto mb-14 border-solid border-2 border-black p-2">
-                    <figure><img src="https://placeimg.com/400/400/arch" alt="Album" className='rounded-lg'/></figure>
-                    <div className="card-body">
-                        <h2 className="card-title text-4xl mt-24">What is Node?<br /> How does Node work?</h2>
-                        <div className="card-actions justify-end">
-                        <label htmlFor="my-modal-4" className="btn modal-button transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 mt-24">Read More</label>
-                        <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-                        <div className="modal">
-                            <div className="modal-box relative">
-                                <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
+                What is Node? How does Node work?
+                </div>
+                <div className="collapse-content"> 
+                    <p>Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node.js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.</p>
+                </div>
                 </div>
             </div>
         </div>
