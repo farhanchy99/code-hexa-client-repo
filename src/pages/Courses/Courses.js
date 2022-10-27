@@ -15,14 +15,14 @@ const Courses = () => {
                         {
                             cards.map(card=>
                             <div key={card.id} className=''>
-                               <div className="card card-compact w-8/12 lg:w-72 bg-base-100 shadow-xl">
+                               <div className="card card-compact w-8/12 lg:w-72 bg-amber-400 shadow-xl">
                                     <figure><img src={card.img} alt="courses"/></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{card.name}</h2>
                                         <p>{card.price}</p>
                                         <p>{card.subs}</p>
                                         <div className="card-actions justify-end">
-                                            <Link to={`/courses/${card.id}`}><button className="btn btn-primary">Buy Now</button></Link>
+                                            <Link to={`/courses/${card.id}`}><button className="btn bg-gray-900">Explore Now</button></Link>
                                             
                                         </div>
                                     </div>

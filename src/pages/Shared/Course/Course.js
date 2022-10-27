@@ -16,15 +16,15 @@ const Course = () => {
                         {
                             courseDetails.map(detail=> 
                             <div key={detail.id} className='mt-16'>
-                                <div className="card lg:card-side bg-base-100 shadow-xl">
-                                <figure className='w-96'><img src={detail.img} alt="Album"/></figure>
+                                <div className="card lg:card-side bg-base-100 shadow-3xl">
+                                <figure className='w-96 pl-5'><img src={detail.img} alt="Album"/></figure>
                                 <div className="card-body w-1/2">
-                                    <h2 className="card-title">{detail.name}</h2>
+                                    <h2 className="card-title text-2xl font-bold">{detail.name}</h2>
                                     <p>{detail.about}</p>
                                     <p>{detail.subs}</p>
                                     <p>{detail.price}</p>
                                     <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Get Premium Access</button>
+                                    <button className="btn btn-primary shadow-xl">Get Premium Access</button>
                                     </div>
                                 </div>
                                 </div>
