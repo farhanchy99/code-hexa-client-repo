@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import img from '../../img/hexa.png'
 import './Header.css'
 
 const Header = () => {
@@ -28,7 +29,10 @@ const Header = () => {
                         <li className='mb-5'><NavLink to='/blog'>Blog</NavLink></li>
                     </ul>
                     </div>
-                    <NavLink className='text-2xl text-gray-900 font-semibold'>Code <span className='text-white font-bold'>HEXA</span></NavLink>
+                    <NavLink className='text-2xl text-gray-900 font-semibold flex'>
+                        <img src={img} alt="logo" className='w-7'/>
+                        Code <span className='text-white font-bold'>HEXA</span>
+                    </NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="nav menu-horizontal">
