@@ -5,6 +5,7 @@ import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import swal from "sweetalert";
 
 const Login = () => {
     const {logIn, providerLogin} = useContext(AuthContext)
@@ -44,6 +45,11 @@ const Login = () => {
             console.log(user);
             form.reset();
             navigate(from, {replace: true});
+            swal({
+                title: "Successfully Registered",
+                button: "OK",
+                icon: "success"
+              });
         })
         .catch(error => console.error(error))
     }
@@ -72,7 +78,7 @@ const Login = () => {
                     </label>
                     <input name='password' type="password" placeholder="password" className="input input-bordered" />
                     <label className="label">
-                        <Link to={'/register'}>Don't have acoount? Register Now</Link>
+                        <p>Don't have acoount?<Link to={'/register'}> Register Now</Link></p>
                     </label>
                     </div>
                     <div className="form-control mt-6">

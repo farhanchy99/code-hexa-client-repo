@@ -1,6 +1,7 @@
 
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import swal from "sweetalert";
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -25,6 +26,11 @@ const Register = () => {
             console.log(user);
             form.reset();
             navigate("/login");
+            swal({
+                title: "Log In Successfully",
+                button: "OK",
+                icon: "success"
+              });
             const profile ={ displayName: name, photoURL:photoURL};
             updateUserProfile(profile)
             .then(()=>{})

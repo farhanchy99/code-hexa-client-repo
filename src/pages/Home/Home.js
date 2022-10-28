@@ -22,7 +22,7 @@ const Home = () => {
             </div>
 
             <div className='container m-auto px-5 lg:px-24 my-16'>
-                <h1 className='text-center text-4xl my-5 my-10 font-bold'>Why IT Programming Courses works</h1>
+                <h1 className='text-center text-4xl my-10 font-bold'>Why Code Hexa Programming Courses works</h1>
                 <div className='grid grid-cols-3 gap-5 text-center'>
                     <div>
                         <FontAwesomeIcon icon={faLaptop} className="text-5xl"/>
