@@ -16,7 +16,7 @@ const Home = () => {
                 <div className="max-w-md">
                 <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                 <p className="mb-5">Start, switch, or advance your career with more than 5,200 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
-                <Link to={"/courses"}><button className="btn btn-primary">Get Started</button></Link>
+                <Link to={"/courses"}><button className="btn bg-amber-400">Get Started</button></Link>
                 </div>
             </div>
             </div>
@@ -48,7 +48,7 @@ const Home = () => {
                 <h2 className="card-title text-5xl font-semibold mb-5">Differentiate your classroom and engage every student.</h2>
                 <p className='mb-5 text-white'>We empower teachers to support their entire classroom. 90% of US teachers who have used Code Hexa have found us effective.</p>
                 <div className="card-actions justify-end">
-                    <Link to={"/courses"}><button className="btn btn-primary">Join Now</button></Link>
+                    <Link to={"/courses"}><button className="btn bg-gray-900">Join Now</button></Link>
                 </div>
             </div>
             </div>

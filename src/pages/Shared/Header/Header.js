@@ -29,7 +29,7 @@ const Header = () => {
                         <li className='mb-5'><NavLink to='/blog'>Blog</NavLink></li>
                     </ul>
                     </div>
-                    <NavLink className='text-2xl text-gray-900 font-semibold flex'>
+                    <NavLink className='text-2xl text-gray-900 font-semibold flex' to='/'>
                         <img src={img} alt="logo" className='w-7'/>
                         Code <span className='text-white font-bold'>HEXA</span>
                     </NavLink>
