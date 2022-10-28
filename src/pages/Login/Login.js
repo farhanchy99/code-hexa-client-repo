@@ -6,8 +6,10 @@ import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import swal from "sweetalert";
+import { useState } from 'react';
 
 const Login = () => {
+    const [error, setError] = useState('')
     const {logIn, providerLogin} = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider();
     const gitHubProvider = new GithubAuthProvider()
@@ -43,6 +45,7 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            setError('');
             form.reset();
             navigate(from, {replace: true});
             swal({
@@ -51,7 +54,10 @@ const Login = () => {
                 icon: "success"
               });
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+            console.error(error);
+            setError(error.message);
+        })
     }
 
     
@@ -82,7 +88,8 @@ const Login = () => {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="btn bg-amber-400">Login</button>
+                        <button className="btn bg-amber-400">Login</button>
+                        <p className='text-rose-700 mt-5'>{error}</p>
                     </div>
                     <p className='text-center text-lg text-bold'>OR</p>
                     <div>

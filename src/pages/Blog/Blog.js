@@ -5,7 +5,7 @@ const Blog = () => {
         <div className='container m-auto mb-10'>
             <h1 className='text-4xl font-bold my-10 text-center'>Featured Blogs</h1>
             <div className=''>
-                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
                 <div className="collapse-title text-xl font-medium">
                     What is CORS?
                 </div>
@@ -14,7 +14,7 @@ const Blog = () => {
                 </div>
                 </div>
 
-                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
                 <div className="collapse-title text-xl font-medium">
                 Why are you using Firebase? What other options do you have to implement authentication?
                 </div>
@@ -23,7 +23,7 @@ const Blog = () => {
                 </div>
                 </div>
 
-                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
                 <div className="collapse-title text-xl font-medium">
                 How does the private route work?
                 </div>
@@ -32,7 +32,7 @@ const Blog = () => {
                 </div>
                 </div>
 
-                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mb-5">
                 <div className="collapse-title text-xl font-medium">
                 What is Node? How does Node work?
                 </div>

@@ -1,12 +1,13 @@
 
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import swal from "sweetalert";
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
     const {createUser, updateUserProfile} = useContext(AuthContext);
-
+    const [error, setError] = useState('')
     
     const navigate = useNavigate();
 
@@ -25,6 +26,7 @@ const Register = () => {
             const user = result.user;
             console.log(user);
             form.reset();
+            setError('');
             navigate("/login");
             swal({
                 title: "Log In Successfully",
@@ -36,7 +38,10 @@ const Register = () => {
             .then(()=>{})
             .catch( e => console.error(e));
         })
-        .catch( e => console.error(e));
+        .catch(e => {
+            console.error(e);
+            setError(e.message);
+        })
     }
 
     return (
@@ -79,6 +84,7 @@ const Register = () => {
                     </label>
                     </div>
                     <button className="btn btn-primary mt-6 form-control" type='submit' value="Login">Sign in</button>
+                    <p className='text-rose-700 mt-5'>{error}</p>
                 </form>
                 </div>
             </div>
