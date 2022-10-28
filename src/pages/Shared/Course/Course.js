@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import LeftNav from '../LeftNav/LeftNav';
 import Pdf from "react-to-pdf"
 
@@ -28,7 +28,7 @@ const Course = () => {
                                     <p className='text-lg font-semibold'>Our Students: {detail.subs}</p>
                                     <p className='text-lg font-semibold'>Price: {detail.price}</p>
                                     <div className="card-actions justify-start lg:justify-end">
-                                    <button className="btn btn-primary shadow-xl mr-5">Get Premium Access</button>
+                                    <Link to={`/checkout/${detail.id}`}><button className="btn btn-primary shadow-xl mr-5">Get Premium Access</button></Link>
                                     <Pdf targetRef={ref} filename="Details.pdf">
                                     {({ toPdf }) => (
                                     <button onClick={toPdf} className="btn btn-primary shadow-xl">Download Course Details</button>
