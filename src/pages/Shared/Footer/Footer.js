@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='p-10 bg-gray-900 footer text-neutral-content justify-around'>
+        <div className='p-10 bg-[#12222D] footer text-neutral-content justify-around'>
             <div>
                 <h1 className='text-3xl text-White font-semibold'>Code <span className='text-amber-400'>HEXA</span></h1>
                 <p>Created By Farhan Chowdhury 2022</p>

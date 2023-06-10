@@ -3,10 +3,10 @@
     border-radius:5px;
 }
 .nav a:hover{
-    background-color: #1F1F1F;
+    background-color: #FBBF24;
     color: white;
 }
 .nav .active{
-    background-color: #1F1F1F ;
+    background-color: #FBBF24 ;
     color: #ffffff;
 }

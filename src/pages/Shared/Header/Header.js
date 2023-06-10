@@ -15,8 +15,8 @@ const Header = () => {
     }
 
     return (
-        <div className='bg-amber-400'>
-            <div className="container navbar m-auto">
+        <div className='bg-black'>
+            <div className="container navbar m-auto w-[95%] py-4">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,13 +29,13 @@ const Header = () => {
                         <li className='mb-5'><NavLink to='/blog'>Blog</NavLink></li>
                     </ul>
                     </div>
-                    <NavLink className='text-2xl text-gray-900 font-semibold flex' to='/'>
+                    <NavLink className='text-2xl text-white font-semibold flex' to='/'>
                         <img src={img} alt="logo" className='w-7'/>
-                        Code <span className='text-white font-bold'>HEXA</span>
+                        Code <span className='text-amber-400 font-bold'>HEXA</span>
                     </NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="nav menu-horizontal">
+                    <ul className="nav menu-horizontal text-white">
                         <li className='ml-5'><NavLink to='/' className={({isActive})=> isActive ? 'active' : undefined} end>Home</NavLink></li>
                         <li className='ml-5'><NavLink to='/courses'>Courses</NavLink></li>
                         <li className='ml-5'><NavLink to='/faq'>FAQ</NavLink></li>
