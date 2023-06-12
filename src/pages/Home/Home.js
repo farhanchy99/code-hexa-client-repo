@@ -115,7 +115,7 @@ const Home = () => {
                 <h1 className='text-center text-4xl my-10 font-bold'>Our Courses</h1>
                 <div className='grid justify-items-center grid-cols-3 gap-4 w-11/12 lg:w-[80%] m-auto mb-10'>
                         {
-                            cards.map(card=>
+                            cards.slice(0,3).map(card=>
                             <div key={card.id} className='group'>
                                 <div className='card-cat hover:scale-105 ease-in duration-200'>
                                     <img src={card.img} className='card-cat-img' alt="" />
@@ -134,6 +134,9 @@ const Home = () => {
                             )
                         }
                 </div>
+                <Link to={`/courses`}>
+                    <button class="btn btn-sm bg-amber-400 hover:bg-amber-500 text-gray-800 hover:text-white rounded">Read More</button>
+                </Link>
 
             </div>
         </div>
